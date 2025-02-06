@@ -145,7 +145,7 @@ opts_po_cont = ContinuationPar(dsmax = 0.03, ds= -0.001, newton_options = Newton
 
 br_po = continuation(
 	br, 1, opts_po_cont,
-	# parallel shooting functional with 5 sections
+	# parallel shooting functional with 15 sections
 	ShootingProblem(15, prob_ode, Rodas5(); parallel = true);
 	# plot = true,
 	record_from_solution = recordPO,
